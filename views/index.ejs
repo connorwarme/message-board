@@ -6,6 +6,14 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <br>
+
+    <% messages.forEach(message => { %>
+      <div class="message-container">
+        <h3><%= message.text %></h3>
+        <p>User: <%= message.user %></p>
+        <p>Date: <%= message.added %></p>
+      </div>
+    <% }) %>
   </body>
 </html>
