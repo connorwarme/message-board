@@ -27,7 +27,6 @@ router.get('/new', (req, res, next) => {
   res.render('form', { title: 'New Message' })
 })
 router.post('/new', (req, res, next) => {
-  console.log(req.body);
   const note = {
     text: req.body.messageText,
     user: req.body.userText,
