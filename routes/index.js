@@ -23,4 +23,11 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'MiniMessage Board', messages });
 });
 
+router.get('/new', (req, res, next) => {
+  res.render('form', { title: 'New Message' })
+})
+router.post('/new', (req, res, next) => {
+  // need fnality
+})
+
 module.exports = router;
