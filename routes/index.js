@@ -27,7 +27,14 @@ router.get('/new', (req, res, next) => {
   res.render('form', { title: 'New Message' })
 })
 router.post('/new', (req, res, next) => {
-  // need fnality
+  console.log(req.body);
+  const note = {
+    text: req.body.messageText,
+    user: req.body.userText,
+    added: new Date()
+  }
+  messages.push(note);
+  res.redirect("/");
 })
 
 module.exports = router;
